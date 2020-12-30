@@ -1,0 +1,28 @@
+.properties__list {
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+}
+.properties-item {
+  margin-right: rem(70px);
+  &:last-child {
+    margin-right: 0;
+  }
+  @include tablets {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .properties-item__name {
+    font-size: 16px;
+    color: #666;
+  }
+  .properties-item__value {
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+  }
+
+}

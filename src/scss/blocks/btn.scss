@@ -1,0 +1,34 @@
+.btn {
+  border-radius: rem(100px);
+  padding: 20px 41px;
+  background-color: $red;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  border: rem(2px) solid transparent;
+  cursor: pointer;
+  &:hover {
+    background: white;
+    color: $red;
+    border: rem(2px) solid $red;
+    transition: 1s;
+  }
+}
+
+.btn--theme--black {
+  font-size: 16px;
+  background: $red;
+  background: transparent;
+  text-transform: none;
+  font-weight: normal;
+  padding: rem(12px);
+  border: transparent;
+  &:hover {
+    background: transparent;
+    border: none;
+    color: $red;
+    transition: 1s;
+  }
+}

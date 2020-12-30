@@ -1,0 +1,15 @@
+.options {
+  display: flex;
+  .options__item {
+    display: flex;
+    max-width: 30%;
+    margin-right: 2.45rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+
+
+

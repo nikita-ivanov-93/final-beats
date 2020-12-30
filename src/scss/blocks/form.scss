@@ -1,0 +1,88 @@
+.form-section {
+  background-color: #181818;
+  color: white;
+}
+
+.form {
+  display: flex;
+  @include tablets {
+    flex-direction: column;
+    padding: 0% 17%;
+  }
+  @include phones {
+    padding: rem(0px) rem(0px);
+  }
+}
+
+.form__col {
+  flex: 1;
+  margin-right: rem(27px);
+  
+  @include tablets {
+    margin-right: rem(0px);
+  }
+
+  &:last-child {
+    margin-right: rem(0px);
+  }
+}
+
+.form__row {
+  display: flex;
+  margin-bottom: rem(10px);
+  @include tablets {
+    margin-bottom: 1rem;
+  }
+  .form__block {
+    font-size: 16px;
+    flex: 1;
+    margin-right: rem(17px);
+    &:last-child {
+      margin-right: 0;
+    }
+    .form__input {
+      width: 100%;
+      border: none;
+      padding: rem(20px) rem(12px);
+      border: rem(3px) solid transparent;
+      border-radius: rem(4px);
+      
+      &--textarea {
+        height: rem(152px);
+        resize: none;
+        margin-bottom: rem(28px);
+      }
+      &:focus {
+        border: rem(3px) solid $red;
+        outline: none;
+      }
+      
+      @include tablets {
+        padding: rem(7px) rem(8px);
+        &--textarea {
+          height: rem(82px);
+          margin-bottom: rem(0px);
+        }
+      }
+    }
+    .input-error {
+      border: rem(3px) solid $red;
+    }
+  }
+}
+
+.form__controls {
+  display: flex;
+  flex-wrap: wrap;
+  @include phones {
+    justify-content: center;
+  }
+}
+
+.form__btns {
+  margin-top: rem(36px);
+
+  @include tablets {
+    text-align: center;
+  }
+}

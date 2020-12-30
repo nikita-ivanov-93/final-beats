@@ -1,0 +1,107 @@
+html {
+  font-size: $baseFontSize;
+
+  @include tablets {
+    font-size: $baseFontSize - 1px;
+  }
+
+  @include phones {
+    font-size: $baseFontSize - 4px;
+  }
+
+}
+
+html, 
+body {
+  height: 100%;
+  
+}
+
+body {
+  font-family: 'Play', Arial, Helvetica, sans-serif;
+  line-height: 1.42;
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.body-active-menu {
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: rem(0px);
+  margin: rem(0px);
+  li {
+    list-style: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+ 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-content {
+  height: 100%;
+  transition: transform 0.8s;
+  will-change: transform; //подготовка браузера для изменения больших размеров
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;  // Что был небольшой отступ от краев окна
+  max-width: $containerWidth;
+  position: relative;
+  padding: rem(0px) 5.825rem;
+}
+
+
+
+
+

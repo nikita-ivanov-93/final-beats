@@ -1,0 +1,19 @@
+.slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  
+  .slider__list {
+    width: 100%;
+    display: flex;
+    position: relative;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transition: right 0.4s;
+  }
+}  
+    
+

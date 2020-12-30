@@ -1,0 +1,193 @@
+.player-section {
+  background-color: #F8FAF9;
+}
+
+.player-section__container {
+  @include tablets {
+    padding: 0 3rem;
+  }
+  @include phones {
+    padding: 0 2rem;
+  }
+}
+.player__title {
+  @include phones {
+    font-size: 32px;
+  }
+}
+
+.player-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .player {
+    width: rem(662px);
+    height: rem(392px);
+    display: block;
+    position: relative;
+    
+    @include tablets {
+      width: rem(594px);
+      height: rem(352px);
+    }
+
+    @include phones {
+      width: rem(394px);
+      height: rem(232px);
+
+    }
+
+    
+    .player__wrapper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .player__elem {
+        width: 100%;
+        height: 100%;
+      }
+      .player__splash {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+        background: 
+        url(./images/decor/player-splash-triangle.jpg) center center no-repeat,
+        url(./images/decor/player-paused.png) center center no-repeat,
+        ;
+      }
+    }
+
+    .player__controls {
+      width: 100%;
+      height: rem(34px);
+      background-color: #151515;
+      position: absolute;
+      top: 92%;
+      display: flex;
+      align-items: center;
+      padding: rem(9px) rem(17px);
+
+      .player__start {
+        // background: url(/images/icons/player-tr.svg) center center no-repeat;
+        display: block;
+        width: 0;
+        height: 0;
+        border: rem(11px) solid transparent;
+        border-right-width: 0;
+        border-top-width: rem(8px);
+        border-bottom-width: rem(8px);
+        border-left-color: white;
+        padding: 0;
+        border-radius: 10%;
+        outline: none;
+      }
+      .player__playback {
+        position: relative;
+        width: rem(442px);
+        height: rem(4px);
+        background: linear-gradient(to right, #E01F3D 0%, #333 0%);
+        margin-left: rem(28px);
+        
+        .player__playback-button {
+          width: rem(12px); 
+          height: rem(12px);
+          border-radius: 50%;
+          background: #E01F3D;
+          position: absolute;
+          top: -72%;
+          left: 0%;
+          padding: 0;
+          @include phones {
+            width: 7px; 
+            height: 7px;
+          }
+        }
+      }
+      .player__volume-icon {
+        width: rem(14px);
+        height: rem(17px);
+        position: relative;
+        opacity: 1;
+        margin-left: 7%;
+        // flex: 1;
+        cursor: pointer;
+        .player__volume-img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      .muted {
+        opacity: 0.5;
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          height: rem(22px);
+          width: rem(2px);
+          transform: rotate(135deg);
+          background-color: white;
+          top: rem(-2px);
+          left: rem(8px);
+        }
+      }
+      .player__volume {
+        position: relative;
+        width: rem(58px);
+        height: rem(4px);
+        background: linear-gradient(to right, #E01F3D 50%, #333 50%);
+        margin-left: rem(24px);
+        position: relative;
+        cursor: pointer;
+
+        .player__volume-button {
+          width: rem(12px);
+          height: rem(12px);
+          border-radius: 50%;
+          background: #E01F3D;
+          position: absolute;
+          top: -72%;
+          left: 100%;
+          padding: 0;
+          @include phones {
+            width: 7px; 
+            height: 7px;
+          }
+        }
+      }
+      .player__duration {
+        color: white;
+        margin-left: 44px;
+
+      }
+    }
+  }
+  .player--active {
+    
+    .player__wrapper {
+      
+      .player__splash {
+        display: none;
+      }
+    }
+    
+  }
+  .paused {
+    .player__controls {
+      
+      .player__start {
+        width: rem(11px);
+        height: rem(16px);
+        border: 0px solid white;
+        border-left-width: rem(4px);
+        border-right-width: rem(4px);
+      }
+    }
+  }
+    
+}
+

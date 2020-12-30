@@ -1,0 +1,48 @@
+.benefits {
+  display: flex;
+  @include phones {
+    flex-direction: column;
+  }
+
+}
+
+.benefits__container {
+  @include tablets {
+    padding: rem(0px) rem(10px);
+  }
+}
+
+.benefits__item {
+  flex: 1;
+  padding: 0 3%;
+  position: relative;
+  @include tablets {
+    &::before {
+      content: '';
+      display: none;
+    }
+  }
+
+  @include phones {
+    padding: 0;
+    margin-bottom: 1.475rem;
+  }
+
+  &:before {
+    content: url('./images/decor/Shape.png');
+    position: absolute;
+    top: rem(50px);
+    right: rem(0px);
+    transform: translate(50%);
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+    &:before {
+      display: none;
+    }
+  }
+}

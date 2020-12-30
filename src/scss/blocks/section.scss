@@ -1,0 +1,25 @@
+.section {
+  height: 100%;
+  min-height: rem(650px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.section__title {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 3rem;
+  text-align: center;
+  &--theme--black {
+    color: white;
+  }
+  @include phones {
+    font-size: 32px;
+    margin-bottom: 2rem;
+  }
+}
+

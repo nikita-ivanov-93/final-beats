@@ -1,0 +1,102 @@
+.hero {
+  background-color: $grey;
+  height: 100%;
+  min-height: rem(650px);
+  color: #292929;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: rem(46px);
+    height: rem(11px);
+    background-color: #C4C4C4;
+    transform: rotate(-45deg);
+    bottom: rem(-7px);
+    right: 20%;
+  }
+
+  .hero__options {
+    @include tablets {
+      display: none;
+    }
+  }
+  
+  .hero__container {
+    background: url('./images/jpg/beats1.png') right center / 44% auto no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-top: 1.6rem;
+    padding-bottom: rem(50px);
+    
+    @include tablets {
+      background: none;
+      // padding: rem(26px) 0;
+      padding: rem(26px) rem(36px) rem(26px) rem(22px);
+    }
+  }
+  
+  .hero__title-section {
+    // flex: 1;
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-end;
+    align-items: flex-start;
+    width: 45%;
+    min-height: rem(310px);
+    @include tablets {
+      flex: 1;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 7%;
+      // position: relative;
+      &::before {
+        content: '';
+        display: block;
+        background-image: url('./images/jpg/beats1.png');
+        background-size: 100%;
+        width: 320px;
+        height: 320px;
+        object-fit: cover;
+        // position: absolute;
+        margin-bottom: 4.3rem;
+      }
+    }
+  }
+    
+  .hero__title {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.08;
+    color: #292929;
+    text-transform: uppercase;
+    margin-bottom: rem(22px);
+    @include tablets {
+      margin-bottom: 0.375rem;
+    }
+    @include phones {
+      font-size: 32px;
+    }
+  }
+  
+  .hero__title-desc {
+    font-size: 21px;
+    line-height: 1.2;
+    color: #292929;
+    font-family: 'Alegreya Sans', Arial, Helvetica, sans-serif;
+    margin-bottom: rem(36px);
+    @include tablets {
+      padding: rem(0px) 25%;
+      margin-bottom: 1.6rem;
+    }
+    @include phones {
+      padding: rem(0px) rem(30px);
+    }
+  }
+}
+
+

@@ -1,0 +1,24 @@
+.telephone {
+  font-size: 18px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-left: rem(46px);
+
+  &:hover {
+    transition: 1s;
+    color: red;
+    .telephone__pic {
+      fill: red;
+      transition: 1s;
+    }
+  }
+  @include phones {
+    font-size: 16px;
+  }
+  .telephone__pic {
+    width: rem(14px);
+    height: rem(14px);
+    margin-right: rem(6px);
+  }
+}

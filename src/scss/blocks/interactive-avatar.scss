@@ -1,0 +1,36 @@
+.interactive-avatar {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  border: rem(4px) solid transparent;
+  &:hover {
+    border: rem(4px) solid #E01F3D;
+  }
+
+  &--active {
+    border: rem(4px) solid #E01F3D;
+  }
+  @include phones {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.interactive-avatar__link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+}
+
+.interactive-avatar__img  {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+

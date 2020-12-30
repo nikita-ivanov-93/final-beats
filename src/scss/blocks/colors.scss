@@ -1,0 +1,109 @@
+.colors-section {
+  background: #181818;
+  // background-size: 100% 100%;// opacity: 0.5;
+  .colors-section__title {
+    top: 10%;
+    left: 10%;
+    position: absolute;
+    @include phones {
+      font-size: 32px;
+      left: 2%;
+
+    }
+  }
+}
+
+.colors-container{
+  display: flex;
+  background: url(./images/decor/colors-back.png) right 16% center no-repeat;
+  justify-content: flex-end;
+  color: white;
+  padding: 0;
+  overflow: hidden;
+  // width: 100%;
+  
+  .colors {
+    display: flex;
+    height: 100vh;
+    // flex-direction: column;
+    .colors__item {
+      display: flex;
+      height: 100%;
+      // flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      .colors__title {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100px;
+        height: 100%;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 1.42;
+        justify-content: flex-end;
+        cursor: pointer;
+        @include phones {
+          width: 90px;
+
+        }
+        .colors__title-text {
+          transform: rotate(-90deg);
+          width: 400px;
+          height: 100px;
+          position: absolute;
+          bottom: 190px;
+          left: -150%;
+          display: flex;
+          align-items: center;
+          @include phones {
+            height: 90px;
+  
+          }
+          
+        }
+      }
+      
+      .colors__content {
+        align-self: flex-start;
+        position: relative;
+        overflow: hidden;
+        transition: width  0.5s;
+        background: rgba(51, 53, 55, 0.9);
+        width: 0px;
+        height: 100%;
+        .colors__container {
+          padding: 32px 53px 32px 38px;
+          @include phones {
+            padding: 32px 32px 32px 18px;
+            
+          }
+          .colors__close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: none;
+          }
+        }
+      }
+    }
+    .colors__item--grey {
+      .colors__title{
+        background: #999999;
+      }
+    }
+    .colors__item--red {
+      .colors__title{
+        background: #E01F3C;
+      }
+      
+    }
+    
+    .colors__item--black {
+      
+      .colors__title{
+        background: #151515;
+      }
+    }
+  }
+}

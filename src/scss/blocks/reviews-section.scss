@@ -1,0 +1,21 @@
+.reviews-section {
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: rem(36px);
+    height: rem(36px);
+    border-radius: 50%;
+    background-color: #868686;
+    bottom: rem(-18px);
+    left: 20%;
+  }
+}
+
+.reviews-section__container {
+  @include tablets {
+    padding: 0 rem(10px);
+  }
+}

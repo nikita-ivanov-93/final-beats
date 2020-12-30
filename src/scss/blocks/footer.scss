@@ -1,0 +1,24 @@
+.footer {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  bottom: 0%;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(20px) rem(90px);
+  @include tablets {
+    padding: rem(20px) rem(0px);
+  }
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.footer__telephone {
+  margin-left: 0;
+    
+}

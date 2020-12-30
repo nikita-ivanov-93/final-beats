@@ -1,0 +1,22 @@
+.prices-section {
+  background-color: #F8FAF9;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: rem(24px);
+    height: rem(24px);
+    bottom: rem(-12px);
+    right: 20%;
+    transform: rotate(30deg);
+    background-color: #292929;
+  }
+}
+.prices-section__container {
+  display: flex;
+  position: relative;
+  @include tablets {
+    padding: 0 5%;
+  }
+}

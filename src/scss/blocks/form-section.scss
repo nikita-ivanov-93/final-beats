@@ -1,0 +1,5 @@
+.form-section__container {
+  @include tablets {
+    padding: 0 rem(10px);
+  }
+}
