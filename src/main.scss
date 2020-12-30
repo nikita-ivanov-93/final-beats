@@ -1,0 +1,35 @@
+$containerWidth: 1100px;
+$baseFontSize: 16px;
+
+//breakpoints
+
+$tablets: 768px;
+$phones: 480px;
+
+
+//colors
+
+$grey: #F5F5F5;
+$red: #E01F3D;
+
+//priority
+
+$z-fixed-menu: 100;
+
+@import 'src/scss/blocks/media.scss';
+
+//normalize
+
+@import url('/src/scss/layout/normalize.css');
+
+//setups
+
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Play:wght@400;700&display=swap');
+// @import 'scss/layout/base.scss';
+
+//components
+
+@import 'scss/**/*.scss';
+
+
